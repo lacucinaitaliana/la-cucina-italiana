@@ -3,23 +3,25 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>La Cucina Italiana — Ricette Autentiche dal Mondo</title>
+<title>La Cucina Italiana | Authentic Italian Recipes & Culinary Experience</title>
 <meta name="description" content="Scopri le migliori ricette italiane autentiche. Pizza, pasta, risotto, tiramisù e molto altro. Disponibile in 8 lingue."/>
 <meta name="keywords" content="ricette italiane, pasta, pizza, cibo italiano, italian food, recipes"/>
 <meta name="author" content="La Cucina Italiana"/>
+<link rel="canonical" href="https://la-cucina-italiana.vercel.app/"/>
+<link rel="icon" type="image/png" href="images/logo.png">
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website"/>
-<meta property="og:url" content="https://www.lacucinaitaliana-demo.com/"/>
+<meta property="og:url" content="https://la-cucina-italiana.vercel.app/"/>
 <meta property="og:title" content="La Cucina Italiana — Ricette Autentiche dal Mondo"/>
 <meta property="og:description" content="Scopri le migliori ricette italiane autentiche tramandate di generazione in generazione."/>
-<meta property="og:image" content="https://www.lacucinaitaliana-demo.com/images/hero_pasta.png"/>
+<meta property="og:image" content="https://la-cucina-italiana.vercel.app/images/hero_pasta.png"/>
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image"/>
 <meta property="twitter:title" content="La Cucina Italiana"/>
 <meta property="twitter:description" content="Scopri le migliori ricette italiane autentiche."/>
-<meta property="twitter:image" content="https://www.lacucinaitaliana-demo.com/images/hero_pasta.png"/>
+<meta property="twitter:image" content="https://la-cucina-italiana.vercel.app/images/hero_pasta.png"/>
 
 <!-- Schema.org JSON-LD for Website SEO -->
 <script type="application/ld+json">
@@ -27,10 +29,10 @@
   "@context": "https://schema.org",
   "@type": "WebSite",
   "name": "La Cucina Italiana",
-  "url": "https://www.lacucinaitaliana-demo.com/",
+  "url": "https://la-cucina-italiana.vercel.app/",
   "potentialAction": {
     "@type": "SearchAction",
-    "target": "https://www.lacucinaitaliana-demo.com/?s={search_term_string}",
+    "target": "https://la-cucina-italiana.vercel.app/?s={search_term_string}",
     "query-input": "required name=search_term_string"
   }
 }
@@ -38,7 +40,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=Inter:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=Inter:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Tajawal:wght@400;500;700&family=Cairo:wght@400;600;700&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
@@ -47,7 +49,7 @@
 <header class="header" id="header">
   <div class="header-inner">
     <a href="#" class="logo">
-      <span class="logo-icon">🍝</span>
+      <img src="images/logo.png" alt="La Cucina Italiana Logo" class="logo-img">
       <div class="logo-text">
         <span class="logo-main" data-i18n="site_name">La Cucina Italiana</span>
         <span class="logo-sub" data-i18n="site_tagline">Sapori Autentici del Mondo</span>
@@ -98,7 +100,7 @@
 <!-- HERO -->
 <section class="hero" id="home">
   <div class="hero-bg">
-    <img src="images/hero_pasta.png" alt="Italian authentic pasta dishes" class="hero-img" id="heroImg" fetchpriority="high"/>
+    <img src="images/hero_pasta.png" alt="Authentic Italian Pasta dishes in Rome" class="hero-img" id="heroImg" fetchpriority="high"/>
     <div class="hero-overlay"></div>
   </div>
   <div class="hero-content">
@@ -106,8 +108,8 @@
     <h1 class="hero-title" data-i18n="hero_title">L'Arte della<br/><em>Cucina Italiana</em></h1>
     <p class="hero-desc" data-i18n="hero_desc">Scopri ricette autentiche tramandate di generazione in generazione. Dal Nord al Sud dell'Italia, ogni piatto racconta una storia.</p>
     <div class="hero-btns">
-      <a href="#ricette" class="btn btn-primary" data-i18n="hero_btn1">Esplora Ricette</a>
-      <a href="#video" class="btn btn-ghost" data-i18n="hero_btn2">▶ Guarda i Video</a>
+      <a href="#ricette" class="btn btn-primary"><span data-i18n="hero_btn1">Esplora Ricette</span></a>
+      <a href="#video" class="btn btn-ghost"><span data-i18n="hero_btn2">▶ Guarda i Video</span></a>
     </div>
     <div class="hero-stats">
       <div class="stat"><span class="stat-num">500+</span><span class="stat-label" data-i18n="stat_recipes">Ricette</span></div>
@@ -216,7 +218,7 @@
   <div class="container">
     <div class="featured-card">
       <div class="featured-img-wrap">
-        <img src="images/risotto.png" alt="Risotto ai Funghi Porcini" class="featured-img" loading="lazy"/>
+        <img src="images/risotto.png" alt="Authentic Italian Risotto ai Funghi Porcini" class="featured-img" loading="lazy"/>
         <div class="featured-badge-img" data-i18n="feat_badge">Ricetta della Settimana</div>
       </div>
       <div class="featured-content">
@@ -232,7 +234,7 @@
           <div class="info-item"><span class="info-icon">👥</span><span data-i18n="servings">4 Persone</span></div>
           <div class="info-item"><span class="info-icon">📊</span><span data-i18n="difficulty">Medio</span></div>
         </div>
-        <a href="#" class="btn btn-primary" data-i18n="view_recipe">Vedi Ricetta Completa</a>
+        <a href="#" class="btn btn-primary"><span data-i18n="view_recipe">Vedi Ricetta Completa</span></a>
       </div>
     </div>
   </div>
@@ -256,7 +258,7 @@
       <!-- Recipe cards injected by JS -->
     </div>
     <div class="load-more-wrap">
-      <button class="btn btn-outline" data-i18n="load_more">Carica Altre Ricette</button>
+      <button class="btn btn-outline"><span data-i18n="load_more">Carica Altre Ricette</span></button>
     </div>
   </div>
 </section>
@@ -333,7 +335,7 @@
     <div class="videos-grid">
       <div class="video-card featured-video">
         <div class="video-thumb">
-          <img src="images/pizza.png" alt="Traditional Neapolitan Pizza" loading="lazy"/>
+          <img src="images/pizza.png" alt="Authentic Neapolitan Pizza tutorial" loading="lazy"/>
           <div class="play-btn" onclick="this.closest('.video-thumb').innerHTML='<iframe width=\'100%\' height=\'100%\' src=\'https://www.youtube.com/embed/G-jPoROGHGE?autoplay=1\' frameborder=\'0\' allowfullscreen></iframe>'">
             <div class="play-circle"><span>▶</span></div>
           </div>
@@ -348,8 +350,8 @@
       </div>
       <div class="video-card">
         <div class="video-thumb small">
-          <img src="images/tiramisu.png" alt="Authentic Tiramisù Dessert" loading="lazy"/>
-          <div class="play-btn small" onclick="this.closest('.video-thumb').innerHTML='<iframe width=\'100%\' height=\'100%\' src=\'https://www.youtube.com/embed/5D10y7u506c?autoplay=1\' frameborder=\'0\' allowfullscreen></iframe>'">▶</div>
+          <img src="images/tiramisu.png" alt="Classic Venetian Tiramisù Dessert" loading="lazy"/>
+          <div class="play-btn small" onclick="this.closest('.video-thumb').innerHTML='<iframe width=\'100%\' height=\'100%\' src=\'https://www.youtube.com/embed/rK4iR5-wJqY?autoplay=1\' frameborder=\'0\' allowfullscreen></iframe>'">▶</div>
           <div class="video-duration">8:21</div>
         </div>
         <div class="video-info">
@@ -360,8 +362,8 @@
       </div>
       <div class="video-card">
         <div class="video-thumb small">
-          <img src="images/bruschetta.png" alt="Classic Tomato Bruschetta" loading="lazy"/>
-          <div class="play-btn small" onclick="this.closest('.video-thumb').innerHTML='<iframe width=\'100%\' height=\'100%\' src=\'https://www.youtube.com/embed/v9i3I9B2TfE?autoplay=1\' frameborder=\'0\' allowfullscreen></iframe>'">▶</div>
+          <img src="images/bruschetta.png" alt="Classic Italian Tomato Bruschetta" loading="lazy"/>
+          <div class="play-btn small" onclick="this.closest('.video-thumb').innerHTML='<iframe width=\'100%\' height=\'100%\' src=\'https://www.youtube.com/embed/1u5q0kP8y6I?autoplay=1\' frameborder=\'0\' allowfullscreen></iframe>'">▶</div>
           <div class="video-duration">5:48</div>
         </div>
         <div class="video-info">
@@ -372,8 +374,8 @@
       </div>
       <div class="video-card">
         <div class="video-thumb small">
-          <img src="images/hero_pasta.png" alt="Pasta"/>
-          <div class="play-btn small" onclick="this.closest('.video-thumb').innerHTML='<iframe width=\'100%\' height=\'100%\' src=\'https://www.youtube.com/embed/qO1lM9E-o9E?autoplay=1\' frameborder=\'0\' allowfullscreen></iframe>'">▶</div>
+          <img src="images/hero_pasta.png" alt="Handmade fresh Italian pasta technique" loading="lazy"/>
+          <div class="play-btn small" onclick="this.closest('.video-thumb').innerHTML='<iframe width=\'100%\' height=\'100%\' src=\'https://www.youtube.com/embed/v09p1G7tJm8?autoplay=1\' frameborder=\'0\' allowfullscreen></iframe>'">▶</div>
           <div class="video-duration">15:02</div>
         </div>
         <div class="video-info">
@@ -429,7 +431,7 @@
       <form class="newsletter-form" id="newsletterForm" onsubmit="handleNewsletter(event)">
         <input type="text" class="nl-input" placeholder="Il tuo nome" data-i18n-placeholder="nl_name" id="nlName"/>
         <input type="email" class="nl-input" placeholder="La tua email" data-i18n-placeholder="nl_email" id="nlEmail" required/>
-        <button type="submit" class="btn btn-primary" data-i18n="nl_btn">Iscriviti Gratis</button>
+        <button type="submit" class="btn btn-primary"><span data-i18n="nl_btn">Iscriviti Gratis</span></button>
       </form>
       <p class="nl-privacy" data-i18n="nl_privacy">🔒 Nessuno spam. Puoi disiscriverti in qualsiasi momento.</p>
       <div id="nlSuccess" class="nl-success" style="display:none" data-i18n="nl_success">🎉 Grazie! Sei iscritto con successo.</div>
@@ -452,7 +454,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <div class="logo">
-            <span class="logo-icon">🍝</span>
+            <img src="images/logo.png" alt="La Cucina Italiana Logo" class="logo-img footer-logo">
             <div class="logo-text">
               <span class="logo-main" data-i18n="site_name">La Cucina Italiana</span>
               <span class="logo-sub" data-i18n="site_tagline">Sapori Autentici del Mondo</span>

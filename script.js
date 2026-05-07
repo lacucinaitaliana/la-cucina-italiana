@@ -996,11 +996,13 @@ function renderRecipes(filter) {
         <h3 class="recipe-title">${title}</h3>
         <div class="recipe-card-meta">
           <span style="color:var(--accent)">★★★★★</span>
-          <button class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.8rem;" onclick="openRecipeModal(${recipe.id})">${translations[currentLang].view_recipe || "View Recipe"}</button>
+          <button class="btn btn-outline" onclick="openRecipeModal(${recipe.id})"><span>${translations[currentLang].view_recipe || "View Recipe"}</span></button>
         </div>
       </div>
     `;
     grid.appendChild(card);
+    // Observe new card
+    if(window.aosObserver) window.aosObserver.observe(card);
   });
 }
 
@@ -1348,7 +1350,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  const aosObserver = new IntersectionObserver((entries, observer) => {
+  window.aosObserver = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
       if(entry.isIntersecting) {
         entry.target.classList.add('aos-animate');
@@ -1362,6 +1364,6 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   document.querySelectorAll('[data-aos]').forEach(el => {
-    aosObserver.observe(el);
+    window.aosObserver.observe(el);
   });
 });

@@ -3,17 +3,24 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Spaghetti alla Carbonara — La Cucina Italiana</title>
+<title>Spaghetti alla Carbonara | Authentic Italian Recipe & Culinary Experience</title>
 <meta name="description" content="La vera ricetta romana. Senza panna, senza aglio, solo guanciale croccante, pecorino romano, uova fresche e pepe nero."/>
 <meta name="keywords" content="carbonara, ricetta originale, guanciale, pecorino, pasta, italian food"/>
 <meta name="author" content="Chef Marco Rossi"/>
-
+<link rel="canonical" href="https://la-cucina-italiana.vercel.app/recipe.html"/>
+<link rel="icon" type="image/png" href="images/logo.png">
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="article"/>
-<meta property="og:url" content="https://www.lacucinaitaliana-demo.com/recipe.html"/>
+<meta property="og:url" content="https://la-cucina-italiana.vercel.app/recipe.html"/>
 <meta property="og:title" content="Spaghetti alla Carbonara"/>
 <meta property="og:description" content="La vera ricetta romana. Senza panna, senza aglio, solo guanciale croccante, pecorino romano, uova fresche e pepe nero."/>
-<meta property="og:image" content="https://www.lacucinaitaliana-demo.com/images/hero_pasta.png"/>
+<meta property="og:image" content="https://la-cucina-italiana.vercel.app/images/hero_pasta.png"/>
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image"/>
+<meta property="twitter:title" content="Spaghetti alla Carbonara | La Cucina Italiana"/>
+<meta property="twitter:description" content="La vera ricetta romana della Carbonara. Scopri i segreti dello chef."/>
+<meta property="twitter:image" content="https://la-cucina-italiana.vercel.app/images/hero_pasta.png"/>
 
 <!-- Schema.org JSON-LD for Recipe SEO -->
 <script type="application/ld+json">
@@ -21,25 +28,75 @@
   "@context": "https://schema.org/",
   "@type": "Recipe",
   "name": "Spaghetti alla Carbonara",
-  "image": "https://www.lacucinaitaliana-demo.com/images/hero_pasta.png",
+  "image": [
+    "https://la-cucina-italiana.vercel.app/images/hero_pasta.png"
+  ],
   "author": {
     "@type": "Person",
     "name": "Chef Marco Rossi"
   },
   "datePublished": "2025-10-15",
-  "description": "La vera ricetta romana per la Carbonara perfetta.",
+  "description": "La vera ricetta romana per la Carbonara perfetta. Senza panna, senza aglio, solo guanciale croccante, pecorino romano, uova fresche e pepe nero.",
   "prepTime": "PT15M",
   "cookTime": "PT10M",
   "totalTime": "PT25M",
+  "keywords": "carbonara, pasta, italian food, roman recipe",
   "recipeYield": "4 servings",
   "recipeCategory": "Pasta",
-  "recipeCuisine": "Italian"
+  "recipeCuisine": "Italian",
+  "nutrition": {
+    "@type": "NutritionInformation",
+    "calories": "580 calories",
+    "fatContent": "35g",
+    "proteinContent": "25g",
+    "carbohydrateContent": "60g"
+  },
+  "recipeIngredient": [
+    "400g Spaghetti",
+    "150g Guanciale",
+    "4 Fresh egg yolks",
+    "1 Whole egg",
+    "100g Pecorino Romano DOP",
+    "Black pepper to taste"
+  ],
+  "recipeInstructions": [
+    {
+      "@type": "HowToStep",
+      "name": "Prepare the guanciale",
+      "text": "Cut the guanciale into strips and sauté in a pan over low heat until crispy.",
+      "url": "https://la-cucina-italiana.vercel.app/recipe.html#step1",
+      "image": "https://la-cucina-italiana.vercel.app/images/guanciale.png"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Create the pecorino cream",
+      "text": "Mix egg yolks, whole egg, grated pecorino, and black pepper in a bowl.",
+      "url": "https://la-cucina-italiana.vercel.app/recipe.html#step2"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Cook the pasta",
+      "text": "Cook spaghetti in salted water until al dente.",
+      "url": "https://la-cucina-italiana.vercel.app/recipe.html#step3"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Combine and emulsify",
+      "text": "Toss pasta with guanciale, then add egg mixture and pasta water to create a creamy sauce.",
+      "url": "https://la-cucina-italiana.vercel.app/recipe.html#step4"
+    }
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "125"
+  }
 }
 </script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=Inter:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=Inter:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Tajawal:wght@400;500;700&family=Cairo:wght@400;600;700&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="style.css"/>
 </head>
 <body class="recipe-page">
@@ -48,7 +105,7 @@
 <header class="header scrolled" id="header">
   <div class="header-inner">
     <a href="index.html" class="logo">
-      <span class="logo-icon">🍝</span>
+      <img src="images/logo.png" alt="La Cucina Italiana Logo" class="logo-img">
       <div class="logo-text">
         <span class="logo-main" data-i18n="site_name">La Cucina Italiana</span>
       </div>
@@ -77,7 +134,7 @@
 <!-- RECIPE HERO -->
 <section class="recipe-hero">
   <div class="recipe-hero-bg">
-    <img src="images/hero_pasta.png" alt="Traditional Spaghetti alla Carbonara" fetchpriority="high"/>
+    <img src="images/hero_pasta.png" alt="Traditional Roman Spaghetti alla Carbonara" fetchpriority="high" decoding="async"/>
     <div class="overlay"></div>
   </div>
   <div class="container recipe-hero-content">
@@ -253,7 +310,7 @@
           <div class="step-content">
             <h3 data-i18n="rcp_step3_title">Cuoci la pasta</h3>
             <p data-i18n="rcp_step3_desc">Cuoci gli spaghetti in abbondante acqua salata (ma non troppo salata, dato che pecorino e guanciale sono sapidi). Scolala al dente, conservando una tazza di acqua di cottura.</p>
-            <div class="step-img-placeholder" style="background-image: url('images/hero_pasta.png')" loading="lazy"></div>
+            <div class="step-img-placeholder" style="background-image: url('images/hero_pasta.png')" loading="lazy" decoding="async"></div>
           </div>
         </div>
 
