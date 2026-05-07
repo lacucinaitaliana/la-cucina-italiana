@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>La Cucina Italiana — Ricette Autentiche dal Mondo</title>
+<meta name="description" content="Scopri le migliori ricette italiane autentiche. Pizza, pasta, risotto, tiramisù e molto altro. Disponibile in 8 lingue."/>
+<meta name="keywords" content="ricette italiane, pasta, pizza, cibo italiano, italian food, recipes"/>
+<meta name="author" content="La Cucina Italiana"/>
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://www.lacucinaitaliana-demo.com/"/>
+<meta property="og:title" content="La Cucina Italiana — Ricette Autentiche dal Mondo"/>
+<meta property="og:description" content="Scopri le migliori ricette italiane autentiche tramandate di generazione in generazione."/>
+<meta property="og:image" content="https://www.lacucinaitaliana-demo.com/images/hero_pasta.png"/>
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image"/>
+<meta property="twitter:title" content="La Cucina Italiana"/>
+<meta property="twitter:description" content="Scopri le migliori ricette italiane autentiche."/>
+<meta property="twitter:image" content="https://www.lacucinaitaliana-demo.com/images/hero_pasta.png"/>
+
+<!-- Schema.org JSON-LD for Website SEO -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "La Cucina Italiana",
+  "url": "https://www.lacucinaitaliana-demo.com/",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://www.lacucinaitaliana-demo.com/?s={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=Inter:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header" id="header">
+  <div class="header-inner">
+    <a href="#" class="logo">
+      <span class="logo-icon">🍝</span>
+      <div class="logo-text">
+        <span class="logo-main" data-i18n="site_name">La Cucina Italiana</span>
+        <span class="logo-sub" data-i18n="site_tagline">Sapori Autentici del Mondo</span>
+      </div>
+    </a>
+    <nav class="nav" id="nav">
+      <a href="#ricette" class="nav-link" data-i18n="nav_recipes">Ricette</a>
+      <a href="#categorie" class="nav-link" data-i18n="nav_categories">Categorie</a>
+      <a href="#chef" class="nav-link" data-i18n="nav_chef">Chef</a>
+      <a href="#video" class="nav-link" data-i18n="nav_video">Video</a>
+      <a href="#newsletter" class="nav-link" data-i18n="nav_contact">Contatto</a>
+    </nav>
+    <div class="header-actions">
+      <button class="search-btn" id="searchBtn" aria-label="Cerca">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      </button>
+      <div class="lang-selector" id="langSelector">
+        <button class="lang-btn" id="langBtn">
+          <span class="lang-flag" id="currentFlag">🇮🇹</span>
+          <span class="lang-name" id="currentLang">IT</span>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="lang-dropdown" id="langDropdown">
+          <button class="lang-option active" data-lang="it" data-flag="🇮🇹">🇮🇹 Italiano</button>
+          <button class="lang-option" data-lang="fr" data-flag="🇫🇷">🇫🇷 Français</button>
+          <button class="lang-option" data-lang="en" data-flag="🇬🇧">🇬🇧 English</button>
+          <button class="lang-option" data-lang="de" data-flag="🇩🇪">🇩🇪 Deutsch</button>
+          <button class="lang-option" data-lang="zh" data-flag="🇨🇳">🇨🇳 中文</button>
+          <button class="lang-option" data-lang="es" data-flag="🇪🇸">🇪🇸 Español</button>
+          <button class="lang-option" data-lang="ar" data-flag="🇸🇦">🇸🇦 العربية</button>
+          <button class="lang-option" data-lang="ja" data-flag="🇯🇵">🇯🇵 日本語</button>
+        </div>
+      </div>
+      <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <!-- Search Bar -->
+  <div class="search-bar" id="searchBar">
+    <div class="search-inner">
+      <input type="text" class="search-input" id="searchInput" data-i18n-placeholder="search_placeholder" placeholder="Cerca ricette, ingredienti..."/>
+      <button class="search-close" id="searchClose">✕</button>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-bg">
+    <img src="images/hero_pasta.png" alt="Italian authentic pasta dishes" class="hero-img" id="heroImg" fetchpriority="high"/>
+    <div class="hero-overlay"></div>
+  </div>
+  <div class="hero-content">
+    <div class="hero-badge" data-i18n="hero_badge">✦ Cucina Tradizionale dal 1950</div>
+    <h1 class="hero-title" data-i18n="hero_title">L'Arte della<br/><em>Cucina Italiana</em></h1>
+    <p class="hero-desc" data-i18n="hero_desc">Scopri ricette autentiche tramandate di generazione in generazione. Dal Nord al Sud dell'Italia, ogni piatto racconta una storia.</p>
+    <div class="hero-btns">
+      <a href="#ricette" class="btn btn-primary" data-i18n="hero_btn1">Esplora Ricette</a>
+      <a href="#video" class="btn btn-ghost" data-i18n="hero_btn2">▶ Guarda i Video</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><span class="stat-num">500+</span><span class="stat-label" data-i18n="stat_recipes">Ricette</span></div>
+      <div class="stat-divider"></div>
+      <div class="stat"><span class="stat-num">8</span><span class="stat-label" data-i18n="stat_langs">Lingue</span></div>
+      <div class="stat-divider"></div>
+      <div class="stat"><span class="stat-num">2M+</span><span class="stat-label" data-i18n="stat_fans">Appassionati</span></div>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <span data-i18n="scroll_down">Scorri</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- CATEGORIES -->
+<section class="categories" id="categorie">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-badge" data-i18n="cat_badge">Le Nostre Categorie</span>
+      <h2 data-i18n="cat_title">Esplora per Categoria</h2>
+      <p data-i18n="cat_desc">Dalle antipasti ai dolci, un viaggio completo attraverso la cucina italiana</p>
+    </div>
+    <div class="categories-grid">
+      <div class="cat-card" data-category="primi" onclick="filterRecipes('primi')">
+        <div class="cat-icon">🍝</div>
+        <h3 data-i18n="cat_pasta">Primi Piatti</h3>
+        <span>120+ ricette</span>
+      </div>
+      <div class="cat-card" data-category="pizza" onclick="filterRecipes('pizza')">
+        <div class="cat-icon">🍕</div>
+        <h3 data-i18n="cat_pizza">Pizza</h3>
+        <span>45+ ricette</span>
+      </div>
+      <div class="cat-card" data-category="secondi" onclick="filterRecipes('secondi')">
+        <div class="cat-icon">🥩</div>
+        <h3 data-i18n="cat_meat">Secondi Piatti</h3>
+        <span>80+ ricette</span>
+      </div>
+      <div class="cat-card" data-category="dolci" onclick="filterRecipes('dolci')">
+        <div class="cat-icon">🍮</div>
+        <h3 data-i18n="cat_dessert">Dolci</h3>
+        <span>95+ ricette</span>
+      </div>
+      <div class="cat-card" data-category="antipasti" onclick="filterRecipes('antipasti')">
+        <div class="cat-icon">🥗</div>
+        <h3 data-i18n="cat_antipasti">Antipasti</h3>
+        <span>60+ ricette</span>
+      </div>
+      <div class="cat-card" data-category="bevande" onclick="filterRecipes('bevande')">
+        <div class="cat-icon">☕</div>
+        <h3 data-i18n="cat_drinks">Bevande</h3>
+        <span>30+ ricette</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REGIONS SECTION -->
+<section class="regions-section" id="regioni">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-badge" data-i18n="reg_badge">Viaggio Culinario</span>
+      <h2 data-i18n="reg_title">Ricette per Regione</h2>
+      <p data-i18n="reg_desc">Ogni regione italiana ha i suoi sapori unici. Scopri l'autenticità locale.</p>
+    </div>
+    <div class="regions-grid">
+      <!-- Naples -->
+      <div class="region-card" style="background-image: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0.2)), url('images/pizza.png');">
+        <div class="region-content">
+          <h3 data-i18n="reg_naples">Napoli (Campania)</h3>
+          <p data-i18n="reg_naples_desc">Pizza, Frutti di Mare & Pomodori</p>
+          <a href="#ricette" class="btn btn-outline light" onclick="filterRecipes('pizza')" data-i18n="reg_explore">Esplora</a>
+        </div>
+      </div>
+      <!-- Rome -->
+      <div class="region-card" style="background-image: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0.2)), url('images/hero_pasta.png');">
+        <div class="region-content">
+          <h3 data-i18n="reg_rome">Roma (Lazio)</h3>
+          <p data-i18n="reg_rome_desc">Carbonara, Pecorino & Guanciale</p>
+          <a href="#ricette" class="btn btn-outline light" onclick="filterRecipes('primi')" data-i18n="reg_explore">Esplora</a>
+        </div>
+      </div>
+      <!-- Sicily -->
+      <div class="region-card" style="background-image: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0.2)), url('images/tiramisu.png');">
+        <div class="region-content">
+          <h3 data-i18n="reg_sicily">Sicilia</h3>
+          <p data-i18n="reg_sicily_desc">Agrumi, Pistacchi & Dolci</p>
+          <a href="#ricette" class="btn btn-outline light" onclick="filterRecipes('dolci')" data-i18n="reg_explore">Esplora</a>
+        </div>
+      </div>
+      <!-- Tuscany -->
+      <div class="region-card" style="background-image: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0.2)), url('images/bruschetta.png');">
+        <div class="region-content">
+          <h3 data-i18n="reg_tuscany">Toscana</h3>
+          <p data-i18n="reg_tuscany_desc">Olio d'oliva, Carne & Pane rustico</p>
+          <a href="#ricette" class="btn btn-outline light" onclick="filterRecipes('antipasti')" data-i18n="reg_explore">Esplora</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURED RECIPE -->
+<section class="featured-section">
+  <div class="container">
+    <div class="featured-card">
+      <div class="featured-img-wrap">
+        <img src="images/risotto.png" alt="Risotto ai Funghi Porcini" class="featured-img" loading="lazy"/>
+        <div class="featured-badge-img" data-i18n="feat_badge">Ricetta della Settimana</div>
+      </div>
+      <div class="featured-content">
+        <div class="featured-meta">
+          <span class="tag" data-i18n="cat_pasta_tag">Primi Piatti</span>
+          <span class="rating">★★★★★ 4.9</span>
+        </div>
+        <h2 class="featured-title" data-i18n="feat_title">Risotto ai Funghi Porcini</h2>
+        <p class="featured-desc" data-i18n="feat_desc">Un classico della cucina italiana del nord. Il risotto ai funghi porcini è un piatto cremoso e profumato, perfetto per le serate autunnali. Con riso Carnaroli e funghi freschi di stagione.</p>
+        <div class="recipe-info">
+          <div class="info-item"><span class="info-icon">⏱️</span><span data-i18n="time_prep">Prep: 15 min</span></div>
+          <div class="info-item"><span class="info-icon">🍳</span><span data-i18n="time_cook">Cottura: 25 min</span></div>
+          <div class="info-item"><span class="info-icon">👥</span><span data-i18n="servings">4 Persone</span></div>
+          <div class="info-item"><span class="info-icon">📊</span><span data-i18n="difficulty">Medio</span></div>
+        </div>
+        <a href="#" class="btn btn-primary" data-i18n="view_recipe">Vedi Ricetta Completa</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RECIPES GRID -->
+<section class="recipes-section" id="ricette">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-badge" data-i18n="rec_badge">Le Nostre Ricette</span>
+      <h2 data-i18n="rec_title">Ultime Ricette</h2>
+    </div>
+    <div class="filter-tabs">
+      <button class="filter-tab active" data-filter="all" data-i18n="filter_all">Tutti</button>
+      <button class="filter-tab" data-filter="primi" data-i18n="filter_pasta">Pasta</button>
+      <button class="filter-tab" data-filter="pizza" data-i18n="filter_pizza">Pizza</button>
+      <button class="filter-tab" data-filter="dolci" data-i18n="filter_desserts">Dolci</button>
+      <button class="filter-tab" data-filter="antipasti" data-i18n="filter_antipasti">Antipasti</button>
+    </div>
+    <div class="recipes-grid" id="recipesGrid">
+      <!-- Recipe cards injected by JS -->
+    </div>
+    <div class="load-more-wrap">
+      <button class="btn btn-outline" data-i18n="load_more">Carica Altre Ricette</button>
+    </div>
+  </div>
+</section>
+
+<!-- CHEF SECTION -->
+<section class="chef-section" id="chef">
+  <div class="container">
+    <div class="section-header light">
+      <span class="section-badge" data-i18n="chef_badge">I Nostri Chef</span>
+      <h2 data-i18n="chef_title">Maestri della Cucina</h2>
+      <p data-i18n="chef_desc">Chef professionisti con decenni di esperienza nelle cucine italiane più prestigiose</p>
+    </div>
+    <div class="chefs-grid">
+      <div class="chef-card">
+        <div class="chef-avatar" style="background: linear-gradient(135deg,#c0392b,#e74c3c)">
+          <span>M</span><div class="chef-badge">⭐</div>
+        </div>
+        <h3 class="chef-name">Marco Rossi</h3>
+        <p class="chef-role" data-i18n="chef_role1">Chef Esecutivo — Roma</p>
+        <p class="chef-bio" data-i18n="chef_bio1">30 anni di esperienza nella cucina romana tradizionale. Stella Michelin dal 2010.</p>
+        <div class="chef-stats">
+          <span>45 ricette</span>
+          <span>★ 4.9</span>
+        </div>
+      </div>
+      <div class="chef-card">
+        <div class="chef-avatar" style="background: linear-gradient(135deg,#8e44ad,#9b59b6)">
+          <span>S</span><div class="chef-badge">⭐</div>
+        </div>
+        <h3 class="chef-name">Sofia Bianchi</h3>
+        <p class="chef-role" data-i18n="chef_role2">Pastry Chef — Milano</p>
+        <p class="chef-bio" data-i18n="chef_bio2">Specializzata in dolci e pasticceria italiana. Ha studiato a Parigi e New York.</p>
+        <div class="chef-stats">
+          <span>38 ricette</span>
+          <span>★ 4.8</span>
+        </div>
+      </div>
+      <div class="chef-card">
+        <div class="chef-avatar" style="background: linear-gradient(135deg,#27ae60,#2ecc71)">
+          <span>L</span><div class="chef-badge">⭐</div>
+        </div>
+        <h3 class="chef-name">Luca Ferrari</h3>
+        <p class="chef-role" data-i18n="chef_role3">Pizzaiolo — Napoli</p>
+        <p class="chef-bio" data-i18n="chef_bio3">Campione mondiale di pizza napoletana. Artigiano del forno a legna.</p>
+        <div class="chef-stats">
+          <span>29 ricette</span>
+          <span>★ 5.0</span>
+        </div>
+      </div>
+      <div class="chef-card">
+        <div class="chef-avatar" style="background: linear-gradient(135deg,#d4a017,#f39c12)">
+          <span>A</span><div class="chef-badge">⭐</div>
+        </div>
+        <h3 class="chef-name">Anna Conti</h3>
+        <p class="chef-role" data-i18n="chef_role4">Chef Regionale — Toscana</p>
+        <p class="chef-bio" data-i18n="chef_bio4">Custode delle tradizioni toscane. Esperta di prodotti biologici e km zero.</p>
+        <div class="chef-stats">
+          <span>52 ricette</span>
+          <span>★ 4.9</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VIDEO SECTION -->
+<section class="video-section" id="video">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-badge" data-i18n="vid_badge">Video Ricette</span>
+      <h2 data-i18n="vid_title">Impara con i Video</h2>
+      <p data-i18n="vid_desc">Tutorial passo-passo con i nostri chef per padroneggiare le tecniche italiane</p>
+    </div>
+    <div class="videos-grid">
+      <div class="video-card featured-video">
+        <div class="video-thumb">
+          <img src="images/pizza.png" alt="Traditional Neapolitan Pizza" loading="lazy"/>
+          <div class="play-btn" onclick="this.closest('.video-thumb').innerHTML='<iframe width=\'100%\' height=\'100%\' src=\'https://www.youtube.com/embed/G-jPoROGHGE?autoplay=1\' frameborder=\'0\' allowfullscreen></iframe>'">
+            <div class="play-circle"><span>▶</span></div>
+          </div>
+          <div class="video-duration">12:34</div>
+        </div>
+        <div class="video-info">
+          <span class="tag">Pizza</span>
+          <h3 data-i18n="vid1_title">La Pizza Napoletana Perfetta</h3>
+          <p data-i18n="vid1_desc">Con Chef Luca Ferrari — Impasta, stendi e cuoci come un vero pizzaiolo napoletano</p>
+          <div class="video-meta"><span>👁 2.3M</span><span>❤️ 48K</span></div>
+        </div>
+      </div>
+      <div class="video-card">
+        <div class="video-thumb small">
+          <img src="images/tiramisu.png" alt="Authentic Tiramisù Dessert" loading="lazy"/>
+          <div class="play-btn small" onclick="this.closest('.video-thumb').innerHTML='<iframe width=\'100%\' height=\'100%\' src=\'https://www.youtube.com/embed/5D10y7u506c?autoplay=1\' frameborder=\'0\' allowfullscreen></iframe>'">▶</div>
+          <div class="video-duration">8:21</div>
+        </div>
+        <div class="video-info">
+          <h3 data-i18n="vid2_title">Tiramisù Classico</h3>
+          <p data-i18n="vid2_desc">La ricetta originale veneziana</p>
+          <div class="video-meta"><span>👁 1.1M</span><span>❤️ 32K</span></div>
+        </div>
+      </div>
+      <div class="video-card">
+        <div class="video-thumb small">
+          <img src="images/bruschetta.png" alt="Classic Tomato Bruschetta" loading="lazy"/>
+          <div class="play-btn small" onclick="this.closest('.video-thumb').innerHTML='<iframe width=\'100%\' height=\'100%\' src=\'https://www.youtube.com/embed/v9i3I9B2TfE?autoplay=1\' frameborder=\'0\' allowfullscreen></iframe>'">▶</div>
+          <div class="video-duration">5:48</div>
+        </div>
+        <div class="video-info">
+          <h3 data-i18n="vid3_title">Bruschetta al Pomodoro</h3>
+          <p data-i18n="vid3_desc">L'antipasto italiano per eccellenza</p>
+          <div class="video-meta"><span>👁 890K</span><span>❤️ 24K</span></div>
+        </div>
+      </div>
+      <div class="video-card">
+        <div class="video-thumb small">
+          <img src="images/hero_pasta.png" alt="Pasta"/>
+          <div class="play-btn small" onclick="this.closest('.video-thumb').innerHTML='<iframe width=\'100%\' height=\'100%\' src=\'https://www.youtube.com/embed/qO1lM9E-o9E?autoplay=1\' frameborder=\'0\' allowfullscreen></iframe>'">▶</div>
+          <div class="video-duration">15:02</div>
+        </div>
+        <div class="video-info">
+          <h3 data-i18n="vid4_title">Pasta Fresca Fatta in Casa</h3>
+          <p data-i18n="vid4_desc">Tecnica professionale passo-passo</p>
+          <div class="video-meta"><span>👁 3.2M</span><span>❤️ 76K</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TIPS SECTION -->
+<section class="tips-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-badge" data-i18n="tips_badge">Consigli & Trucchi</span>
+      <h2 data-i18n="tips_title">I Segreti della Cucina Italiana</h2>
+    </div>
+    <div class="tips-grid">
+      <div class="tip-card">
+        <div class="tip-icon">🧂</div>
+        <h3 data-i18n="tip1_title">L'acqua della pasta</h3>
+        <p data-i18n="tip1_desc">Aggiungi sempre l'acqua di cottura alla salsa. L'amido rende il sugo cremoso e fa attaccare meglio il condimento.</p>
+      </div>
+      <div class="tip-card">
+        <div class="tip-icon">🫒</div>
+        <h3 data-i18n="tip2_title">Olio Extra Vergine</h3>
+        <p data-i18n="tip2_desc">Usa sempre olio EVO di qualità a crudo. Per cuocere usa olio normale, per condire solo il migliore.</p>
+      </div>
+      <div class="tip-card">
+        <div class="tip-icon">🧀</div>
+        <h3 data-i18n="tip3_title">Il Parmigiano</h3>
+        <p data-i18n="tip3_desc">Usa solo Parmigiano Reggiano DOP grattugiato al momento. La differenza è abissale rispetto a quello in busta.</p>
+      </div>
+      <div class="tip-card">
+        <div class="tip-icon">🍅</div>
+        <h3 data-i18n="tip4_title">Pomodori San Marzano</h3>
+        <p data-i18n="tip4_desc">Per la salsa autentica usa solo pomodori San Marzano DOP. Il gusto dolce e poco acido è inimitabile.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="newsletter-section" id="newsletter">
+  <div class="newsletter-bg"></div>
+  <div class="container">
+    <div class="newsletter-content">
+      <div class="newsletter-icon">📧</div>
+      <h2 data-i18n="news_title">Ricevi le Ricette Ogni Settimana</h2>
+      <p data-i18n="news_desc">Iscriviti alla nostra newsletter e ricevi ogni settimana le migliori ricette italiane, consigli degli chef e inviti esclusivi.</p>
+      <form class="newsletter-form" id="newsletterForm" onsubmit="handleNewsletter(event)">
+        <input type="text" class="nl-input" placeholder="Il tuo nome" data-i18n-placeholder="nl_name" id="nlName"/>
+        <input type="email" class="nl-input" placeholder="La tua email" data-i18n-placeholder="nl_email" id="nlEmail" required/>
+        <button type="submit" class="btn btn-primary" data-i18n="nl_btn">Iscriviti Gratis</button>
+      </form>
+      <p class="nl-privacy" data-i18n="nl_privacy">🔒 Nessuno spam. Puoi disiscriverti in qualsiasi momento.</p>
+      <div id="nlSuccess" class="nl-success" style="display:none" data-i18n="nl_success">🎉 Grazie! Sei iscritto con successo.</div>
+    </div>
+  </div>
+</section>
+
+<!-- RECIPE MODAL -->
+<div class="modal-overlay" id="recipeModal" onclick="closeModal(event)">
+  <div class="modal" id="modalContent">
+    <button class="modal-close" onclick="closeRecipeModal()">✕</button>
+    <div id="modalBody"></div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-top">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo">
+            <span class="logo-icon">🍝</span>
+            <div class="logo-text">
+              <span class="logo-main" data-i18n="site_name">La Cucina Italiana</span>
+              <span class="logo-sub" data-i18n="site_tagline">Sapori Autentici del Mondo</span>
+            </div>
+          </div>
+          <p data-i18n="footer_about">Il portale di riferimento per la cucina italiana autentica. Ricette tradizionali, tecniche professionali e ingredienti di qualità.</p>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Instagram">📷</a>
+            <a href="#" class="social-link" aria-label="YouTube">▶️</a>
+            <a href="#" class="social-link" aria-label="Facebook">📘</a>
+            <a href="#" class="social-link" aria-label="TikTok">🎵</a>
+            <a href="#" class="social-link" aria-label="Pinterest">📌</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer_recipes">Ricette</h4>
+          <ul>
+            <li><a href="#" data-i18n="cat_pasta">Primi Piatti</a></li>
+            <li><a href="#" data-i18n="cat_pizza">Pizza</a></li>
+            <li><a href="#" data-i18n="cat_meat">Secondi</a></li>
+            <li><a href="#" data-i18n="cat_dessert">Dolci</a></li>
+            <li><a href="#" data-i18n="cat_antipasti">Antipasti</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer_info">Informazioni</h4>
+          <ul>
+            <li><a href="#" data-i18n="footer_about_link">Chi Siamo</a></li>
+            <li><a href="#chef" data-i18n="nav_chef">Chef</a></li>
+            <li><a href="#video" data-i18n="nav_video">Video</a></li>
+            <li><a href="#newsletter" data-i18n="footer_contact">Contattaci</a></li>
+            <li><a href="#" data-i18n="footer_privacy">Privacy Policy</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer_langs">Lingue</h4>
+          <ul>
+            <li><a href="#" onclick="setLanguage('it')">🇮🇹 Italiano</a></li>
+            <li><a href="#" onclick="setLanguage('fr')">🇫🇷 Français</a></li>
+            <li><a href="#" onclick="setLanguage('en')">🇬🇧 English</a></li>
+            <li><a href="#" onclick="setLanguage('de')">🇩🇪 Deutsch</a></li>
+            <li><a href="#" onclick="setLanguage('zh')">🇨🇳 中文</a></li>
+            <li><a href="#" onclick="setLanguage('es')">🇪🇸 Español</a></li>
+            <li><a href="#" onclick="setLanguage('ar')">🇸🇦 العربية</a></li>
+            <li><a href="#" onclick="setLanguage('ja')">🇯🇵 日本語</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <p data-i18n="footer_copy">© 2025 La Cucina Italiana. Tutti i diritti riservati. Fatto con ❤️ in Italia.</p>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" onclick="scrollToTop()" aria-label="Torna su">↑</button>
+
+<script src="script.js"></script>
+</body>
+</html>

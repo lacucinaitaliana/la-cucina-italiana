@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Spaghetti alla Carbonara — La Cucina Italiana</title>
+<meta name="description" content="La vera ricetta romana. Senza panna, senza aglio, solo guanciale croccante, pecorino romano, uova fresche e pepe nero."/>
+<meta name="keywords" content="carbonara, ricetta originale, guanciale, pecorino, pasta, italian food"/>
+<meta name="author" content="Chef Marco Rossi"/>
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="article"/>
+<meta property="og:url" content="https://www.lacucinaitaliana-demo.com/recipe.html"/>
+<meta property="og:title" content="Spaghetti alla Carbonara"/>
+<meta property="og:description" content="La vera ricetta romana. Senza panna, senza aglio, solo guanciale croccante, pecorino romano, uova fresche e pepe nero."/>
+<meta property="og:image" content="https://www.lacucinaitaliana-demo.com/images/hero_pasta.png"/>
+
+<!-- Schema.org JSON-LD for Recipe SEO -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/",
+  "@type": "Recipe",
+  "name": "Spaghetti alla Carbonara",
+  "image": "https://www.lacucinaitaliana-demo.com/images/hero_pasta.png",
+  "author": {
+    "@type": "Person",
+    "name": "Chef Marco Rossi"
+  },
+  "datePublished": "2025-10-15",
+  "description": "La vera ricetta romana per la Carbonara perfetta.",
+  "prepTime": "PT15M",
+  "cookTime": "PT10M",
+  "totalTime": "PT25M",
+  "recipeYield": "4 servings",
+  "recipeCategory": "Pasta",
+  "recipeCuisine": "Italian"
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=Inter:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body class="recipe-page">
+
+<!-- HEADER -->
+<header class="header scrolled" id="header">
+  <div class="header-inner">
+    <a href="index.html" class="logo">
+      <span class="logo-icon">🍝</span>
+      <div class="logo-text">
+        <span class="logo-main" data-i18n="site_name">La Cucina Italiana</span>
+      </div>
+    </a>
+    <div class="header-actions">
+      <div class="lang-selector" id="langSelector">
+        <button class="lang-btn" id="langBtn">
+          <span class="lang-flag" id="currentFlag">🇮🇹</span>
+          <span class="lang-name" id="currentLang">IT</span>
+        </button>
+        <div class="lang-dropdown" id="langDropdown">
+          <button class="lang-option active" data-lang="it" data-flag="🇮🇹">🇮🇹 Italiano</button>
+          <button class="lang-option" data-lang="en" data-flag="🇬🇧">🇬🇧 English</button>
+          <button class="lang-option" data-lang="ar" data-flag="🇸🇦">🇸🇦 العربية</button>
+          <button class="lang-option" data-lang="fr" data-flag="🇫🇷">🇫🇷 Français</button>
+          <button class="lang-option" data-lang="de" data-flag="🇩🇪">🇩🇪 Deutsch</button>
+          <button class="lang-option" data-lang="es" data-flag="🇪🇸">🇪🇸 Español</button>
+          <button class="lang-option" data-lang="zh" data-flag="🇨🇳">🇨🇳 中文</button>
+          <button class="lang-option" data-lang="ja" data-flag="🇯🇵">🇯🇵 日本語</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- RECIPE HERO -->
+<section class="recipe-hero">
+  <div class="recipe-hero-bg">
+    <img src="images/hero_pasta.png" alt="Traditional Spaghetti alla Carbonara" fetchpriority="high"/>
+    <div class="overlay"></div>
+  </div>
+  <div class="container recipe-hero-content">
+    <div class="recipe-breadcrumbs">
+      <a href="index.html" data-i18n="nav_home">Home</a> > 
+      <a href="index.html#ricette" data-i18n="cat_pasta">Primi Piatti</a> > 
+      <span data-i18n="rcp_carbonara_title">Spaghetti alla Carbonara</span>
+    </div>
+    <h1 class="recipe-main-title" data-i18n="rcp_carbonara_title">Spaghetti alla Carbonara</h1>
+    <p class="recipe-main-desc" data-i18n="rcp_carbonara_desc">La vera ricetta romana. Senza panna, senza aglio, solo guanciale croccante, pecorino romano, uova fresche e pepe nero.</p>
+    
+    <div class="recipe-actions-bar">
+      <div class="chef-author">
+        <div class="chef-img">M</div>
+        <div>
+          <span class="author-label" data-i18n="rcp_author">Ricetta di:</span>
+          <strong data-i18n="rcp_chef_name">Chef Marco Rossi</strong>
+        </div>
+      </div>
+      <div class="action-buttons">
+        <button class="btn-action" onclick="window.print()">
+          <span class="icon">🖨️</span> <span data-i18n="rcp_print">Stampa</span>
+        </button>
+        <button class="btn-action save-btn" onclick="toggleSaveRecipe(this)">
+          <span class="icon">🔖</span> <span class="save-text" data-i18n="rcp_save">Salva</span>
+        </button>
+        <button class="btn-action share-btn">
+          <span class="icon">🔗</span> <span data-i18n="rcp_share">Condividi</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RECIPE META STATS -->
+<div class="recipe-meta-stats">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-box">
+        <span class="stat-icon">⏱️</span>
+        <div class="stat-info">
+          <span class="stat-title" data-i18n="rcp_prep">Prep</span>
+          <strong data-i18n="rcp_prep_time">15 min</strong>
+        </div>
+      </div>
+      <div class="stat-box">
+        <span class="stat-icon">🍳</span>
+        <div class="stat-info">
+          <span class="stat-title" data-i18n="rcp_cook">Cottura</span>
+          <strong data-i18n="rcp_cook_time">10 min</strong>
+        </div>
+      </div>
+      <div class="stat-box">
+        <span class="stat-icon">👥</span>
+        <div class="stat-info">
+          <span class="stat-title" data-i18n="rcp_servings">Persone</span>
+          <strong data-i18n="rcp_servings_count">4</strong>
+        </div>
+      </div>
+      <div class="stat-box">
+        <span class="stat-icon">📊</span>
+        <div class="stat-info">
+          <span class="stat-title" data-i18n="rcp_difficulty">Difficoltà</span>
+          <strong data-i18n="rcp_diff_level">Media</strong>
+        </div>
+      </div>
+      <div class="stat-box">
+        <span class="stat-icon">🔥</span>
+        <div class="stat-info">
+          <span class="stat-title" data-i18n="rcp_calories">Calorie</span>
+          <strong data-i18n="rcp_cal_count">580 kcal</strong>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- RECIPE CONTENT -->
+<section class="recipe-content-wrapper">
+  <div class="container">
+    <div class="recipe-layout">
+      
+      <!-- LEFT SIDEBAR: INGREDIENTS & TIPS -->
+      <aside class="recipe-sidebar">
+        <div class="ingredients-box">
+          <h3 data-i18n="rcp_ingredients">Ingredienti</h3>
+          <div class="servings-adjuster">
+            <button onclick="adjustServings(-1)">-</button>
+            <span id="servingCount">4</span> <span data-i18n="rcp_servings_label">porzioni</span>
+            <button onclick="adjustServings(1)">+</button>
+          </div>
+          <ul class="ingredients-list">
+            <li>
+              <label class="ingredient-checkbox">
+                <input type="checkbox"/>
+                <span class="checkmark"></span>
+                <span class="amount" data-base="400">400</span>g <span data-i18n="rcp_ing_pasta">Spaghetti</span>
+              </label>
+            </li>
+            <li>
+              <label class="ingredient-checkbox">
+                <input type="checkbox"/>
+                <span class="checkmark"></span>
+                <span class="amount" data-base="150">150</span>g <span data-i18n="rcp_ing_guanciale">Guanciale</span>
+              </label>
+            </li>
+            <li>
+              <label class="ingredient-checkbox">
+                <input type="checkbox"/>
+                <span class="checkmark"></span>
+                <span class="amount" data-base="4">4</span> <span data-i18n="rcp_ing_yolks">Tuorli d'uovo freschissimi</span>
+              </label>
+            </li>
+            <li>
+              <label class="ingredient-checkbox">
+                <input type="checkbox"/>
+                <span class="checkmark"></span>
+                <span class="amount" data-base="1">1</span> <span data-i18n="rcp_ing_egg">Uovo intero</span>
+              </label>
+            </li>
+            <li>
+              <label class="ingredient-checkbox">
+                <input type="checkbox"/>
+                <span class="checkmark"></span>
+                <span class="amount" data-base="100">100</span>g <span data-i18n="rcp_ing_cheese">Pecorino Romano DOP</span>
+              </label>
+            </li>
+            <li>
+              <label class="ingredient-checkbox">
+                <input type="checkbox"/>
+                <span class="checkmark"></span>
+                <span data-i18n="rcp_ing_pepper">Pepe nero in grani q.b.</span>
+              </label>
+            </li>
+          </ul>
+        </div>
+
+        <div class="chef-tips-box">
+          <div class="tip-header">
+            <span>👨‍🍳</span>
+            <h4 data-i18n="rcp_tips_title">I Segreti dello Chef</h4>
+          </div>
+          <ul class="tips-list">
+            <li data-i18n="rcp_tip1"><strong>Pancetta o Guanciale?</strong> Il guanciale è obbligatorio per la vera ricetta romana. Ha più grasso e sapore.</li>
+            <li data-i18n="rcp_tip2"><strong>Il calore:</strong> Non mescolare le uova sul fuoco! Il calore della pasta è sufficiente per creare la crema perfetta senza fare l'effetto "frittata".</li>
+            <li data-i18n="rcp_tip3"><strong>Acqua di cottura:</strong> Conserva sempre una tazza di acqua di cottura. È ricca di amido e fondamentale per mantecare.</li>
+          </ul>
+        </div>
+      </aside>
+
+      <!-- RIGHT MAIN: STEPS & FAQ -->
+      <main class="recipe-main-steps">
+        <h2 class="steps-title" data-i18n="rcp_steps_title">Preparazione Passo Passo</h2>
+        
+        <div class="step-card">
+          <div class="step-number">1</div>
+          <div class="step-content">
+            <h3 data-i18n="rcp_step1_title">Prepara il guanciale</h3>
+            <p data-i18n="rcp_step1_desc">Taglia il guanciale a listarelle di circa 1 cm. Mettilo in una padella fredda senza olio e accendi il fuoco basso. Fai sudare il grasso finché il guanciale non diventa croccante ma non bruciato.</p>
+          </div>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">2</div>
+          <div class="step-content">
+            <h3 data-i18n="rcp_step2_title">La crema di pecorino</h3>
+            <p data-i18n="rcp_step2_desc">In una ciotola grande, unisci i tuorli, l'uovo intero, il pecorino grattugiato e abbondante pepe nero appena macinato. Mescola con una frusta fino a ottenere una crema densa. Aggiungi un cucchiaio del grasso del guanciale sciolto per insaporire.</p>
+          </div>
+        </div>
+
+        <div class="step-card has-image">
+          <div class="step-number">3</div>
+          <div class="step-content">
+            <h3 data-i18n="rcp_step3_title">Cuoci la pasta</h3>
+            <p data-i18n="rcp_step3_desc">Cuoci gli spaghetti in abbondante acqua salata (ma non troppo salata, dato che pecorino e guanciale sono sapidi). Scolala al dente, conservando una tazza di acqua di cottura.</p>
+            <div class="step-img-placeholder" style="background-image: url('images/hero_pasta.png')" loading="lazy"></div>
+          </div>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">4</div>
+          <div class="step-content">
+            <h3 data-i18n="rcp_step4_title">La mantecatura (Il momento magico)</h3>
+            <p data-i18n="rcp_step4_desc">Metti la pasta scolata nella padella con il guanciale (fuoco spento!). Aggiungi la crema di uova e pecorino. Inizia a mescolare velocemente, aggiungendo un po' di acqua di cottura per creare un'emulsione cremosa e perfetta.</p>
+          </div>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">5</div>
+          <div class="step-content">
+            <h3 data-i18n="rcp_step5_title">Servi subito</h3>
+            <p data-i18n="rcp_step5_desc">Servi immediatamente nei piatti caldi, aggiungendo altro pecorino e una macinata di pepe nero in cima.</p>
+          </div>
+        </div>
+
+        <!-- FAQ SECTION -->
+        <div class="recipe-faq">
+          <h3 data-i18n="rcp_faq_title">Domande Frequenti (FAQ)</h3>
+          
+          <div class="faq-item">
+            <h4 data-i18n="rcp_faq1_q">Posso usare la pancetta?</h4>
+            <p data-i18n="rcp_faq1_a">Se non trovi il guanciale, la pancetta tesa o dolce è un'alternativa accettabile, ma il sapore originale si ottiene solo col guanciale.</p>
+          </div>
+          
+          <div class="faq-item">
+            <h4 data-i18n="rcp_faq2_q">Posso prepararla in anticipo?</h4>
+            <p data-i18n="rcp_faq2_a">No, la carbonara va preparata e mangiata immediatamente. Se si raffredda, la crema perde la sua setosità.</p>
+          </div>
+
+          <div class="faq-item">
+            <h4 data-i18n="rcp_faq3_q">Panna sì o panna no?</h4>
+            <p data-i18n="rcp_faq3_a">Assolutamente NO. L'aggiunta di panna è considerata un crimine culinario in Italia. La cremosità deve derivare solo dall'emulsione di uovo, formaggio e acqua di cottura.</p>
+          </div>
+        </div>
+
+      </main>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-bottom">
+    <div class="container">
+      <p data-i18n="footer_copy">© 2025 La Cucina Italiana. Tutti i diritti riservati.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
